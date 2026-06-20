@@ -1,0 +1,9 @@
+.box {
+  background: lightgreen;
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .box {
+    background: lightblue;
+  }
+}

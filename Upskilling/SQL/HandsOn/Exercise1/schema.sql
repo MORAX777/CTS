@@ -1,0 +1,1 @@
+CREATE TABLE Students (Id INT, Name VARCHAR(50));
