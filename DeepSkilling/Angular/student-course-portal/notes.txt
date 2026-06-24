@@ -1,0 +1,95 @@
+HandOn - 1
+angular.json
+Purpose: Configures Angular workspace settings, build options, serve options and project configurations.
+
+tsconfig.json
+Purpose: Base TypeScript configuration used across the project.
+
+tsconfig.app.json
+Purpose: TypeScript compiler settings specifically for the Angular application.
+
+package.json
+Purpose: Contains project metadata, dependencies, scripts and package configurations.
+
+src/main.ts
+Purpose: Entry point of the Angular application that bootstraps the root application configuration.
+
+src/app/app.config.ts
+Purpose: Defines application-wide providers and configuration for standalone Angular applications.
+
+src/app/app.ts
+Purpose: Root component containing the main application logic and UI structure.
+
+src/index.html
+Purpose: Main HTML page that hosts the Angular application in the browser.
+
+Budget Configuration
+
+maximumWarning: 500kB
+If the initial application bundle exceeds 500kB, Angular displays a warning during the build.
+
+maximumError: 1MB
+If the initial application bundle exceeds 1MB, Angular stops the build and throws an error.
+
+Purpose:
+These limits help monitor bundle size and prevent the application from becoming too large, which could affect loading performance.
+
+
+=========================
+HANDS-ON 2
+=========================
+
+Task 1: Data Binding
+1. Interpolation
+   Syntax: {{ property }}
+   Purpose: Displays component data in the template.
+   Example:
+   {{ portalName }}
+2. Property Binding
+   Syntax: [property]="expression"
+   Purpose: Sends data from component to DOM.
+   Example:
+   [disabled]="!isPortalActive"
+3. Event Binding
+   Syntax: (event)="method()"
+   Purpose: Handles user actions.
+   Example:
+   (click)="onEnrollClick()"
+4. Two-Way Binding
+   Syntax: [(ngModel)]="property"
+   Purpose: Synchronizes component and UI data.
+   Example:
+   [(ngModel)]="searchTerm"
+Difference:
+[property] → One-way binding (Component → DOM)
+[(ngModel)] → Two-way binding (Component ↔ DOM)
+Task 2: Lifecycle Hooks
+1. ngOnInit()
+   Fires once when component is initialized.
+   Used for loading data.
+   Output:
+   HomeComponent initialised — courses loaded
+2. ngOnDestroy()
+   Fires when component is removed from the page.
+   Used for cleanup and unsubscribing.
+   Output:
+   HomeComponent destroyed
+3. ngOnChanges()
+   Fires whenever an @Input() property changes.
+   Example:
+   @Input() course: any
+   Output:
+   Previous Value: undefined
+   Current Value: {name: 'Angular', code: 'ANG101', credits: 4}
+Component Communication:
+@Input()
+Used to pass data from parent component to child component.
+Example:
+CourseListComponent → CourseCardComponent
+Files Created:
+- components/course-card
+- pages/course-list
+- pages/home
+Result:
+Successfully implemented Data Binding, Lifecycle Hooks and @Input() communication in Student Course Portal.
+Can find the output screenshots on that folder.

@@ -1,0 +1,26 @@
+nav {
+  background-color: #1976d2;
+  color: white;
+  padding: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+h2 {
+  white-space: nowrap;
+}
+h2 {
+  font-size: 28px;
+}
